@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio CV</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background-color: #111;
+}
+
+/* Hero Section Parallax */
+.hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f")
+    center/cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero h1 span {
+    color: #00eaff;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fade 1s forwards;
+}
+.delay { animation-delay: 0.4s; }
+.delay2 { animation-delay: 0.8s; }
+
+@keyframes fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 25px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover { color: #00eaff; }
+
+/* Section */
+.section {
+    padding: 80px 10%;
+    background: #111;
+    text-align: center;
+}
+
+.parallax-bg {
+    background: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085")
+    center/cover fixed;
+}
+
+.parallax-bg2 {
+    background: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1")
+    center/cover fixed;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: #00eaff;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-card {
+    padding: 10px 20px;
+    background: #222;
+    border: 1px solid #00eaff;
+    border-radius: 8px;
+}
+
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #1b1b1b;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    text-align: left;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: .6s;
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+}
+
+.project-card h3 {
+    color: #00eaff;
+    margin: 10px;
+}
+
+.project-card p {
+    padding: 0 10px;
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    background: #00eaff;
+    color: #000;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+}
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Scroll Animation Active */
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+}
+</style>
+
+</head>
+<body>
+
+    <!-- Hero Parallax -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Hi, I'm <span>Your Name</span></h1>
+            <p class="fade-in delay">Creative Designer & IT Professional</p>
+            <a href="#about" class="btn fade-in delay2">Explore</a>
+        </div>
+    </section>
+
+    <!-- Navbar -->
+    <header id="navbar">
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            Replace this text with your introduction or description from Behance.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section parallax-bg">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill-card">UI/UX</div>
+            <div class="skill-card">Web Design</div>
+            <div class="skill-card">Brand Identity</div>
+            <div class="skill-card">Illustration</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card scroll-anim">
+                <img src="https://via.placeholder.com/400x250" alt="">
+                <h3>Project Title 1</h3>
+                <p>Short description from Behance project.</p>
+            </div>
+
+            <div class="project-card scroll-anim">
+                <img src="https://via.placeholder.com/400x250" alt="">
+                <h3>Project Title 2</h3>
+                <p>Short description from Behance project.</p>
+            </div>
+
+            <div class="project-card scroll-anim">
+                <img src="https://via.placeholder.com/400x250" alt="">
+                <h3>Project Title 3</h3>
+                <p>Short description from Behance project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section parallax-bg2">
+        <h2>Contact Me</h2>
+        <a href="mailto:youremail@gmail.com" class="btn">Email Me</a>
+    </section>
+
+    <footer>
+        © 2025 Your Name — All Rights Reserved
+    </footer>
+
+<script>
+// Scroll animation observer
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".scroll-anim").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
